@@ -1,18 +1,19 @@
 <template>
   <div class="home">
         <h4>  Home </h4>
+    <FooterComp />
   </div>
 </template>
 
 <script>
-import { Component, Vue } from 'vue-property-decorator';
-@Component({
-  name: "Home"
-  })
+import FooterComp from '@/components/FooterComp.vue';
 
-export default class Home extends Vue {
-}
-
+export default {
+  name: 'home',
+  components: {
+    FooterComp,
+  },
+};
 </script>
 
 <style scoped>
