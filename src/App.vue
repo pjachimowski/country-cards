@@ -6,26 +6,22 @@
             <b-collapse id="nav-collapse" is-nav>
     <!-- Right aligned nav items -->
               <b-navbar-nav class="ml-auto">
-                <b-nav-item> Home </b-nav-item>
-                <b-nav-item> Randomizer </b-nav-item>
-                <b-nav-item> Categories </b-nav-item>
+                <b-nav-item><router-link tag="li" to="/">Home</router-link></b-nav-item>
+                <b-nav-item><router-link tag="li" to="/randomizer">Randomizer</router-link></b-nav-item>
+                <b-nav-item><router-link tag="li" to="/categories">Categories</router-link></b-nav-item>
               </b-navbar-nav>
             </b-collapse>
       </b-navbar>
-    <HelloWorld />
+      <router-view/>
   </div>
 </template>
 
-<script lang="ts">
-import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from './components/HelloWorld.vue';
-
-@Component({
+<script>
+export default {
+  name: 'app',
   components: {
-    HelloWorld,
   },
-})
-export default class App extends Vue {}
+}
 </script>
 
 <style>
