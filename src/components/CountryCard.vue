@@ -9,8 +9,9 @@
                 <b-card-text> <i class="fas fa-globe"></i> {{ apiData[countryId].subregion }}</b-card-text>
                 <b-card-text> <i class="fas fa-city"></i> {{ apiData[countryId].capital }}</b-card-text>
                 <b-card-text> <i class="fas fa-users"></i> {{ apiData[countryId].population }}</b-card-text>
-                <b-button href="#" variant="info">Details</b-button>
-            </div>
+                <b-button class="country-button" variant="info"><router-link tag="li" to="/detailed-page">Details</router-link></b-button>
+                <!-- @click="Lisbon(countryId)"  v-bind:detailedPage="detailedPage" v-bind:countryId="Lisbon"-->
+           </div>
             <template v-slot:footer>
                 <em>{{ apiData[countryId].alpha3Code }}</em>
             </template>
@@ -19,14 +20,17 @@
 </template>
  
 <script lang='ts'>
-import { Component, Vue } from 'vue-property-decorator';
+import { Component,  Vue } from 'vue-property-decorator';
 import { CountriesRepo } from '../repositories/CountriesRepo';
+import DetailedPage from '../views/DetailedPage.vue';
  
 @Component({
   name: 'countryCard',
   props: {
     countryId: Number
   }
+
+
 })
  
 export default class CountryCard extends Vue {
@@ -37,9 +41,16 @@ export default class CountryCard extends Vue {
     const countriesRepo = new CountriesRepo();
     countriesRepo.countries.then((responseFromCountries) => {
       this.apiData = responseFromCountries;
-    });
+         }); 
+     }
   }
-}
+//THIS WAS MADE
+//  Lisbon(countryId) {
+//      alert(message: countryId) 
+//   } 
+//@click="Lisbon()"
+//THIS WAS MADE
+
 </script>
  
 <style scoped>
@@ -50,7 +61,10 @@ h2 {
 h4 {
   text-transform: uppercase;
 }
- 
+
+.country-button {
+    list-style: none;
+}
 .card-style {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   transition: 0.3s;

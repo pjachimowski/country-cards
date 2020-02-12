@@ -7,6 +7,8 @@ export class CountriesRepo {
         },
     };
   
+    idpoland = 0;
+
     public get countries() {
         return axios
             .create(this.corsConfig)

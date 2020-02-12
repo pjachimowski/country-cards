@@ -3,6 +3,7 @@ import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Randomizer from '../views/Randomizer.vue';
 import Categories from '../views/Categories.vue';
+import DetailedPage from '../views/DetailedPage.vue';
 
 Vue.use(VueRouter);
 
@@ -21,6 +22,12 @@ const routes = [
     path: '/categories',
     name: 'categories',
     component: Categories,
+  },
+  {
+    path: '/detailed-page',
+    name: 'detailedPage',
+    component: DetailedPage,
+   
   },
 ];
 

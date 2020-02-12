@@ -1,8 +1,8 @@
 <template>
   <div class="home">
-        <b-jumbotron class="jumbotron-style" header="Welcome" lead="Get information about countries via a RESTful API">
-        <p>Country Cards is a personal project for DTT assigment</p>
-         <b-button variant="info" href="https://restcountries.eu/#api-endpoints" target="_blank">RESTful API</b-button>
+        <b-jumbotron class="jumbotron-style" header="Welcome" lead="Here you can get detailed information about any country.">
+        <p>Country Cards is a personal project created using free source API.</p>
+        <b-button variant="info" href="https://restcountries.eu/#api-endpoints" target="_blank">Go to API</b-button>
       </b-jumbotron>
     <Visited />
     <FooterComp />
