@@ -4,16 +4,19 @@
         <p>Country Cards is a personal project for DTT assigment</p>
          <b-button variant="info" href="https://restcountries.eu/#api-endpoints" target="_blank">RESTful API</b-button>
       </b-jumbotron>
+    <Visited />
     <FooterComp />
   </div>
 </template>
 
 <script>
 import FooterComp from '@/components/FooterComp.vue';
+import Visited from '@/components/Visited.vue';
 
 export default {
   name: 'home',
   components: {
+    Visited,
     FooterComp,
   },
 };
