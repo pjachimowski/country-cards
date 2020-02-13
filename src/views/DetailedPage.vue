@@ -11,25 +11,27 @@
           </b-media>
           <h5 class="mt-0">Names</h5>
           <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
-            <p><em><font style="color:#5bc0de"> Common: </font> </em> {{ apiData[0].name }} </p>
-            <p><em><font style="color:#5bc0de"> Native: </font> </em> {{ apiData[0].nativeName }} </p>
-            <p><em><font style="color:#5bc0de"> Speling: </font> </em> {{ apiData[0].altSpellings[1] }} </p>
-            <h5 class="mt-0">Details</h5>
+            <p><strong><font style="color:#5bc0de"> Common: </font> </strong> {{ apiData[0].name }} </p>
+            <p><strong><font style="color:#5bc0de"> Native: </font> </strong> {{ apiData[0].nativeName }} </p>
+            <p><strong><font style="color:#5bc0de"> Speling: </font> </strong> {{ apiData[0].altSpellings[1] }} </p>
+            <h5 class="mt-0">Geography</h5>
           <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
-            <p><em><font style="color:#5bc0de"> Region: </font> </em> {{ apiData[0].capital }} </p>
-            <p><em><font style="color:#5bc0de"> Region: </font> </em> {{ apiData[0].region }} </p>
-            <p><em><font style="color:#5bc0de"> Subregion: </font> </em> {{ apiData[0].subregion }} </p>
-            <p><em><font style="color:#5bc0de"> Population: </font> </em> {{ apiData[0].population }} </p>
-            <p><em><font style="color:#5bc0de"> Area: </font> </em> {{ apiData[0].area }} km2</p>
+            <p><strong><font style="color:#5bc0de"> Capital: </font> </strong> {{ apiData[0].capital }} </p>
+            <p><strong><font style="color:#5bc0de"> Region: </font> </strong> {{ apiData[0].region }} </p>
+            <p><strong><font style="color:#5bc0de"> Subregion: </font> </strong> {{ apiData[0].subregion }} </p>
+            <p><strong><font style="color:#5bc0de"> Demonym: </font> </strong> {{ apiData[0].demonym }} </p>
+            <p><strong><font style="color:#5bc0de"> Lat/Lng: </font> </strong> {{ apiData[0].latlng }} </p>
+            <p><strong><font style="color:#5bc0de"> Population: </font> </strong> {{ apiData[0].population }} </p>
+            <p><strong><font style="color:#5bc0de"> Area: </font> </strong> {{ apiData[0].area.toLocaleString() }} km2</p>
           <h5 class="mt-0">Curency</h5>
           <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
-            <p><em></em> <font style="font-size: xx-large; color:#5bc0de">{{ apiData[0].currencies[0].symbol }}</font> </p>
-            <p><em><font style="color:#5bc0de"> Name: </font> </em> {{ apiData[0].currencies[0].name }} </p>
-            <p><em><font style="color:#5bc0de"> Code: </font> </em> {{ apiData[0].currencies[0].code }} </p>
+            <p> <font style="font-size: xx-large; color:#5bc0de">{{ apiData[0].currencies[0].symbol }}</font> </p>
+            <p><strong><font style="color:#5bc0de"> Name: </font> </strong> {{ apiData[0].currencies[0].name }} </p>
+            <p><strong><font style="color:#5bc0de"> Code: </font> </strong> {{ apiData[0].currencies[0].code }} </p>
           <h5 class="mt-0">Languages</h5>
           <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
-            <p><em><font style="color:#5bc0de"> Name: </font> </em> {{ apiData[0].languages[0].name }} </p>
-            <p><em><font style="color:#5bc0de"> native name: </font> </em> {{ apiData[0].languages[0].nativeName }} </p>
+            <p><strong><font style="color:#5bc0de"> Name: </font> </strong> {{ apiData[0].languages[0].name }} </p>
+            <p><strong><font style="color:#5bc0de"> native name: </font> </strong> {{ apiData[0].languages[0].nativeName }} </p>
         </b-card>
       </div>
     </b-container>
@@ -84,9 +86,8 @@ hr {
 
 .flag-style{
   object-fit: cover;
-  border-radius: 50%;
-  height: 80px;
-  width: 80px;;
+  height: 110px;
+  width: 110px;;
   border: 2px solid #5bc0de;
   padding: 5px;
   image-resolution: initial;
