@@ -1,15 +1,15 @@
 <template>
   <div class='randomizer'>
-      <h2>10 examples of Country Cards</h2>
-      <h3>Click to see more details</h3>
+      <h1>Randomizer</h1>
+      <hr/>
+      <p>Here you can get a random Country Card.</p>
         <div class="container" deck>
-          <div class="row">
-            <div class="col-md-4 col-lg-4 mx-auto mb-4" >
-              <b-button class="text-uppercase" @click="generateRandom" variant="outline-info">Take me anywhere</b-button>
-              <p>  Random Country Card </p>
+          <b-row>
+            <b-col class="mx-auto mb-4">
+              <b-button class="randomizer-btn" @click="generateRandom" variant="outline-info">Take me anywhere</b-button>
               <CountryCard v-bind:randomizer="randomizer" v-bind:countryId="randomID"/>
-            </div>
-          </div>
+            </b-col>
+          </b-row>
         </div>
         <FooterComp />
   </div>
@@ -33,7 +33,7 @@ import CountryCard from '@/components/CountryCard.vue';
 export default class Randomizer extends Vue {
   apiData = [];
   randomID = 0;
-  maxId = 250;
+  maxId = 249;
  
   mounted () {
     const countriesRepo = new CountriesRepo();
@@ -76,16 +76,25 @@ export default class Randomizer extends Vue {
 
 <style scoped>
 
-h2 {
-  margin-top: 40px;
-}
- 
-h3 {
-  margin-bottom: 40px;
-}
-
 .randomizer {
   text-align: center;
+}
+
+h1 {
+  margin: 20px;
+  text-transform: uppercase;
+}
+
+hr {
+  background-color: #ffab86;
+  height: 5px;
+  width: 60px;
+}
+
+.randomizer-btn {
+  margin: 10px;
+  text-transform: uppercase;
+
 }
 
 </style>

@@ -2,15 +2,15 @@
     <div class='countryCard'>
         <b-card class="card-style" header-tag="header" footer-tag="footer">
             <template v-slot:header>
-                <h4 class="mb-0">  {{ apiData[countryId].name }} </h4>
+                <div class="card-title mb-0">  {{ apiData[countryId].name }} </div>
             </template>
             <div class="card-content">
                 <img class="flag-style" v-bind:src="apiData[countryId].flag" alt="flag">
                 <b-card-text> <i class="fas fa-globe"></i> {{ apiData[countryId].subregion }}</b-card-text>
                 <b-card-text> <i class="fas fa-city"></i> {{ apiData[countryId].capital }}</b-card-text>
                 <b-card-text> <i class="fas fa-users"></i> {{ apiData[countryId].population }}</b-card-text>
-                <b-button class="country-button" variant="info"><router-link tag="li" to="/detailed-page">Details</router-link></b-button>
-                <!-- @click="Lisbon(countryId)"  v-bind:detailedPage="detailedPage" v-bind:countryId="Lisbon"-->
+                <b-button class="country-button" variant="info"><router-link tag="li" :to="{name:'detailedPage', params:{countryId}}">Details</router-link></b-button>
+                <!-- ?countryId={{countryId}}   -->
            </div>
             <template v-slot:footer>
                 <em>{{ apiData[countryId].alpha3Code }}</em>
@@ -54,12 +54,9 @@ export default class CountryCard extends Vue {
 </script>
  
 <style scoped>
-h2 {
-  margin-top: 40px;
-}
- 
-h4 {
-  text-transform: uppercase;
+.card-title {
+    text-transform: uppercase;
+    font-size: large;
 }
 
 .country-button {

@@ -4,19 +4,19 @@
         <p>Country Cards is a personal project created using free source API.</p>
         <b-button variant="info" href="https://restcountries.eu/#api-endpoints" target="_blank">Go to API</b-button>
       </b-jumbotron>
-    <Visited />
+    <Examples />
     <FooterComp />
   </div>
 </template>
 
 <script>
 import FooterComp from '@/components/FooterComp.vue';
-import Visited from '@/components/Visited.vue';
+import Examples from '@/components/Examples.vue';
 
 export default {
   name: 'home',
   components: {
-    Visited,
+    Examples,
     FooterComp,
   },
 };
@@ -30,4 +30,5 @@ export default {
   background-position: center; 
   background-size: cover;
 }
+
 </style>

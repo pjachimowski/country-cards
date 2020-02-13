@@ -12,7 +12,13 @@
           <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-4">
             <h6 class="text-uppercase font-weight-bold">Similar Projects</h6>
               <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
-                <p>
+
+              <div v-for="routeName in routesNames" :key="routeName">
+                <router-link tag="li" :to="{name: routeName}">{{routeName}}</router-link>
+              </div>
+
+
+                <!-- <p>
                   <a target="_blank" href="http://countries.petethompson.net/">Countries of the world</a>
                 </p>
                 <p>
@@ -23,7 +29,7 @@
                 </p>
                 <p>
                   <a target="_blank" href="https://github.com/davidesantangelo/restcountry">REST Countries Ruby</a>
-                </p>
+                </p> -->
           </div>
           <div class="col-md-4 col-lg-4 col-xl-4 mx-auto mb-md-0 mb-4">
             <h6 class="text-uppercase font-weight-bold">Author</h6>
@@ -61,6 +67,12 @@ import { Component, Vue } from 'vue-property-decorator';
   name: 'footerComp',
 })
 export default class FooterComp extends Vue {
+  
+  public routesNames = [];
+
+  mounted () {
+    this.routesNames = this.$router.options.routes.map((router: {name: string}) => router.name)
+  }
 }
 
 </script>
@@ -73,12 +85,6 @@ a {
 a:hover {
   color:  rgb(164, 235, 235);
   text-decoration: none;
-}
-
-hr {
-  background-color: azure;
-  height: 3px;
-  width: 60px;
 }
 
 .footer-style {
@@ -105,5 +111,10 @@ hr {
   width: 50px;;
   image-resolution: initial;
   background-repeat: no-repeat;
+}
+hr {
+  background-color: #ffab86;
+  height: 5px;
+  width: 60px;
 }
 </style>

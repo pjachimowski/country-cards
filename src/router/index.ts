@@ -24,7 +24,7 @@ const routes = [
     component: Categories,
   },
   {
-    path: '/detailed-page',
+    path: '/detailed-page/:countryId',
     name: 'detailedPage',
     component: DetailedPage,
    
