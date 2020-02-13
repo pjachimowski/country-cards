@@ -43,7 +43,7 @@ nav li.router-link-active {
   color:azure;
 }
 nav li.router-link-exact-active {
-  color: rgb(121, 255, 255);
+  color: #ffab86;
   font-weight: bold;
   cursor: pointer;
 }

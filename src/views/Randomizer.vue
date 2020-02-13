@@ -33,7 +33,7 @@ import CountryCard from '@/components/CountryCard.vue';
 export default class Randomizer extends Vue {
   apiData = [];
   randomID = 0;
-  maxId = 195;
+  maxId = 250;
  
   mounted () {
     const countriesRepo = new CountriesRepo();
@@ -42,7 +42,6 @@ export default class Randomizer extends Vue {
       this.apiData = responseFromCountries;
     });
   }
-
 
  generateRandom() {
     this.randomID = Math.floor((Math.random() * this.maxId));

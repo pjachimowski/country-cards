@@ -2,11 +2,13 @@
   <div class="categories">
       <div class="category-test-box"> 
         <h4>  Country Card - Categories </h4>
+        <h6>Please select the continent</h6> 
+        <div class="category-selector">
+          <b-form-select v-model="selected" :options="regions" @change="updateCountries(selected)" ></b-form-select>
+        </div>
+        <hr/>
         <div class="container" deck>
           <div class="row">
-            <div class="category-selector">
-              <b-form-select v-model="selected" :options="regions" @change="updateCountries(selected)" ></b-form-select>
-            </div>
             <div class="col-md-4 col-lg-4 mx-auto mb-4" v-for="selectedRegion in selectedRegions" :key="selectedRegion">  
                   <CountryCard  v-bind:countryId="selectedRegion.id" />
             </div>
@@ -72,6 +74,13 @@ export default class Categories extends Vue {
 }
 .category-selector {
   width: 200px;
+}
+hr {
+  background-color: #e6e6e6;
+  margin-top: 35px;
+  margin-bottom: 35px; 
+  width: 80%;
+  height: 0.5px;
 }
 
 </style>
