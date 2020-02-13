@@ -1,17 +1,17 @@
 <template>
   <div class='randomizer'>
-      <h1>Randomizer</h1>
-      <hr/>
-      <p>Here you can get a random Country Card.</p>
-        <div class="container" deck>
-          <b-row>
-            <b-col class="mx-auto mb-4">
-              <b-button class="randomizer-btn" @click="generateRandom" variant="outline-info">Take me anywhere</b-button>
-              <CountryCard v-bind:randomizer="randomizer" v-bind:countryId="randomID"/>
-            </b-col>
-          </b-row>
-        </div>
-        <FooterComp />
+    <h1>Randomizer</h1>
+    <hr/>
+    <p>Here you can get a random Country Card.</p>
+    <div class="container" deck>
+      <b-button class="randomizer-btn" @click="generateRandom" variant="outline-info">Take me anywhere</b-button>
+      <b-row class="justify-content-md-center">
+        <b-col align-self="center" class="sm-11 md-4 mb-4">
+          <CountryCard v-bind:randomizer="randomizer" v-bind:countryId="randomID"/>
+        </b-col>
+      </b-row>
+    </div>
+    <FooterComp />
   </div>
 </template>
 
@@ -20,7 +20,6 @@ import { Component, Vue } from 'vue-property-decorator';
 import { CountriesRepo } from '../repositories/CountriesRepo';
 import FooterComp from '@/components/FooterComp.vue';
 import CountryCard from '@/components/CountryCard.vue';
-// import axios from 'axios';
  
 @Component({
   name: 'randomizer',
@@ -47,35 +46,9 @@ export default class Randomizer extends Vue {
     this.randomID = Math.floor((Math.random() * this.maxId));
   }
 }
-
-//MY TRY ON
-
-//  generateRandom() {
-//     this.randomID = getRandomInt(195);
-//  }
-
-//   getRandomInt(max) {
-//     return Math.floor(Math.random() * Math.floor(max));
-//   }
-
-//MY TRY ON
-
-
-// FOUND ONLINE
-
-// function getRandomInt(max) {
-//   return Math.floor(Math.random() * Math.floor(max));
-// }
-
-// console.log(getRandomInt(3));
-// expected output: 0, 1 or 2
-
-// FOUND ONLINE
-
 </script>
 
 <style scoped>
-
 .randomizer {
   text-align: center;
 }
@@ -94,7 +67,6 @@ hr {
 .randomizer-btn {
   margin: 10px;
   text-transform: uppercase;
-
 }
 
 </style>

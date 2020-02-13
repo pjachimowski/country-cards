@@ -6,8 +6,6 @@ export class CountriesRepo {
             'Content-Type': 'application/json',
         },
     };
-  
-    idpoland = 0;
 
     public get countries() {
         return axios

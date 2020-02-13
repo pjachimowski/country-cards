@@ -108,7 +108,7 @@ export default class DetailedPage extends Vue {
 
     this.countryId = Number(this.$router.currentRoute.params.countryId);
     const countriesRepo = new CountriesRepo(); 
-        countriesRepo.countries.then((responseFromCountries) => {
+        countriesRepo.countries.then((responseFromCountries: any) => {
       this.apiData = responseFromCountries;
     });
   }

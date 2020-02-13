@@ -39,7 +39,7 @@ export default class CountryCard extends Vue {
  
   public mounted () {
     const countriesRepo = new CountriesRepo();
-    countriesRepo.countries.then((responseFromCountries) => {
+    countriesRepo.countries.then((responseFromCountries: any) => {
       this.apiData = responseFromCountries;
          }); 
      }

@@ -1,28 +1,23 @@
 <template>
   <div class="categories">
-    <a name="top"></a>
-      <div class="category-test-box"> 
-        <h1>Categories </h1>
-        <hr/>
-        <p>Please select the continent</p> 
-        <div class="category-selector">
-          <b-form-select v-model="selected" :options="regions" @change="updateCountries(selected)" ></b-form-select>
-        </div>
-
-        <div class="category-selector">
-          <b-form-select v-model="selected" :options="regions" @change="updateCountries(selected)" ></b-form-select>
-        </div>
-
-
-        <div class="container" deck>
-          <div class="row">
-            <div class="col-md-4 col-lg-4 mx-auto mb-4" v-for="selectedRegion in selectedRegions" :key="selectedRegion">  
-                  <CountryCard  v-bind:countryId="selectedRegion.id" />
-            </div>
-            <a href="#top">Back to top</a>
+    <div>
+      <h1>Categories</h1>
+      <hr/>
+      <p>Please select the continent</p> 
+      <b-row class="justify-content-md-center">
+        <b-col cols="2" col-lg="2" align-self="center">
+            <b-form-select v-model="selected" :options="regions" @change="updateCountries(selected)"></b-form-select>
+        </b-col>
+      </b-row>
+      <hr class="thin"/>
+      <div class="container" deck>
+        <div class="row">
+          <div class="col-md-4 col-lg-4 mx-auto mb-4" v-for="selectedRegion in selectedRegions" :key="selectedRegion">  
+                <CountryCard  v-bind:countryId="selectedRegion.id" />
           </div>
-        </div>    
-      </div>
+        </div>
+      </div>    
+    </div>
     <FooterComp />
   </div>
 </template>
@@ -78,27 +73,23 @@ export default class Categories extends Vue {
   text-align: center;
 }
 
-.category-test-box {
-  padding: 50px;
-  margin: 50px;
-}
-.category-selector {
-  width: 200px;
-}
-
 h1 {
   margin: 20px;
   text-transform: uppercase;
-}
- 
-h2 {
-  margin-bottom: 40px;
 }
 
 hr {
   background-color: #ffab86;
   height: 5px;
   width: 60px;
+}
+
+hr.thin {
+  background-color: #e6e6e6;
+  margin-top: 35px;
+  margin-bottom: 35px; 
+  width: 80%;
+  height: 0.5px;
 }
 
 </style>
