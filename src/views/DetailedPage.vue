@@ -3,7 +3,7 @@
     <b-container>
       <h1>Details page</h1>
       <hr/>
-      <p class="title-style"> Details about: <font style="color:#5bc0de"> {{ apiData[countryId].name }}</font> </p>
+      <p class="title-style"> Details about: <font style="color:#5bc0de"> {{ apiData[countryId].name }}</font></p>
         <b-card class="card-style">
           <b-row cols="1">
             <b-col style="text-align: center;">
@@ -35,6 +35,7 @@
             </b-col>
           </b-row>
           <hr class="thin"/>
+
           <b-row>
             <b-col cols="6" md="2" style="text-align: center;">
               <p style="color:#ffab86; font-size: large;"> <i class="fas fa-city"></i></p>
@@ -83,7 +84,6 @@ import { Component, Vue } from 'vue-property-decorator';
 import FooterComp from '@/components/FooterComp.vue';
 import { CountriesRepo } from '../repositories/CountriesRepo';
 
-
 @Component({
   name: 'detailedPage',
   components: {
@@ -95,9 +95,7 @@ export default class DetailedPage extends Vue {
   public apiData = [];
   public countryId = 0;
  
- 
   public mounted () {
-
     this.countryId = Number(this.$router.currentRoute.params.countryId);
     const countriesRepo = new CountriesRepo(); 
     // eslint-disable-next-line 

@@ -5,8 +5,8 @@
     <p>Here you can get a random Country Card.</p>
     <div class="container">
       <b-button class="randomizer-btn" @click="generateRandom" variant="outline-info">Take me anywhere</b-button>
-      <b-row class="justify-content-md-center">
-        <b-col align-self="center" class="sm-11 md-4 mb-4">
+      <b-row>
+        <b-col cols="12" lg="4" offset-lg="4" align-self="center" class="mb-4">
           <CountryCard v-bind:randomizer="randomizer" v-bind:countryId="randomID"/>
         </b-col>
       </b-row>
