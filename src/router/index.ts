@@ -2,7 +2,7 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import Home from '../views/Home.vue';
 import Randomizer from '../views/Randomizer.vue';
-import Categories from '../views/Categories.vue';
+import Continents from '../views/Continents.vue';
 import DetailedPage from '../views/DetailedPage.vue';
 
 Vue.use(VueRouter);
@@ -19,9 +19,9 @@ const routes = [
     component: Randomizer,
   },
   {
-    path: '/categories',
-    name: 'categories',
-    component: Categories,
+    path: '/continents',
+    name: 'continents',
+    component: Continents,
   },
   {
     path: '/detailed-page/:countryId',

@@ -3,7 +3,7 @@
     <h1>Randomizer</h1>
     <hr/>
     <p>Here you can get a random Country Card.</p>
-    <div class="container" deck>
+    <div class="container">
       <b-button class="randomizer-btn" @click="generateRandom" variant="outline-info">Take me anywhere</b-button>
       <b-row class="justify-content-md-center">
         <b-col align-self="center" class="sm-11 md-4 mb-4">

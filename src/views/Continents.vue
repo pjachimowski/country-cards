@@ -1,19 +1,19 @@
 <template>
   <div class="categories">
-    <div>
-      <h1>Categories</h1>
-      <hr/>
-      <p>Please select the continent</p> 
-      <b-row class="justify-content-md-center">
-        <b-col cols="2" col-lg="2" align-self="center">
-            <b-form-select v-model="selected" :options="regions" @change="updateCountries(selected)"></b-form-select>
+    <h1>Categories</h1>
+    <hr/>
+    <p>Please select the continent</p> 
+    <div class="container">
+      <b-row cols="1">
+        <b-col cols="6" col-lg="2" style="text-align: center;">
+          <b-form-select v-model="selected" :options="regions" @change="updateCountries(selected)"></b-form-select>
         </b-col>
       </b-row>
       <hr class="thin"/>
       <div class="container" deck>
         <div class="row">
           <div class="col-md-4 col-lg-4 mx-auto mb-4" v-for="selectedRegion in selectedRegions" :key="selectedRegion">  
-                <CountryCard  v-bind:countryId="selectedRegion.id" />
+            <CountryCard  v-bind:countryId="selectedRegion.id" />
           </div>
         </div>
       </div>    
@@ -84,7 +84,7 @@ hr {
   width: 60px;
 }
 
-hr.thin {
+.thin {
   background-color: #e6e6e6;
   margin-top: 35px;
   margin-bottom: 35px; 

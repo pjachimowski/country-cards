@@ -8,7 +8,7 @@
           <b-navbar-nav class="ml-auto">
             <b-nav-item><router-link tag="li" to="/">Home</router-link></b-nav-item>
             <b-nav-item><router-link tag="li" to="/randomizer">Randomizer</router-link></b-nav-item>
-            <b-nav-item><router-link tag="li" to="/categories">Categories</router-link></b-nav-item>
+            <b-nav-item><router-link tag="li" to="/continents">Continents</router-link></b-nav-item>
           </b-navbar-nav>
         </b-collapse>
     </b-navbar>

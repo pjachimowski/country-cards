@@ -27,8 +27,9 @@ export default {
 .jumbotron-style {
   background: url("../assets/jumbotronimage.jpg");
   border-radius: 0%;
-  color: azure;
+  color: white;
   background-position: center; 
   background-size: cover;
+  height: 100%;
 }
 </style>
