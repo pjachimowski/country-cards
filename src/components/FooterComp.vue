@@ -21,7 +21,7 @@
             <h6 class="text-uppercase font-weight-bold">Author</h6>
             <hr class="accent-2 mb-4 mt-0 d-inline-block mx-auto">
             <div>
-              <img class="author-photo" src="../assets/author.jpg" alt="flag">
+              <img class="author-photo" src="../assets/author.jpg" alt="author">
               <em> Patryk Jachimowski</em>
             </div>
             <p>

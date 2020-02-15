@@ -1,6 +1,6 @@
 <template>
   <div class="categories">
-    <h1>Categories</h1>
+    <h1>Continents</h1>
     <hr/>
     <p>Please select the continent</p> 
     <div class="container">

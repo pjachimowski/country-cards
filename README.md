@@ -38,20 +38,40 @@ Footer
 ### Languages
 - HTML
 - CSS
-- BootstrapVue
 - TypeScript
 - Vue.js
+### other technologies
 - vuex
 - eslint
+- BootstrapVue
 - babel
 - JSON
 - axios
+- postman (for API testing) 
+- Heroku (hosting platform)
 
 ### Libraries
 - BootstrapVue (https://bootstrap-vue.js.org/)
 - Fontawesome (https://fontawesome.com/)
 
------------------------------------------------------------------
+## Elements
+
+## Menu
+- The menu contains a Home button, Continents (categories) button and a Randomizer button.
+- Menu is fixed while scrolling.
+## Homepage
+- The homepage shows 10 records from a public API (https://restcountries.eu/#api-endpoints).
+- All items are clickable to link to their detailpage.
+- !There is NO sorting option (due to time and level of knowledge, as well as type of API I chose, I was not able to add this functionality)
+## Detailpage
+- Shows all the details retrieved from the public API regarding the selected record.
+- Detail page DOES NOT show 3 relevant other items on this page based on provided data from the chosen public API.
+## Footer
+- Footer contains at least a generated sitemap .
+## Randomizer page
+- Randomizer page shows a random item.
+- Randomizer page contains a button to show another random item.
+## All pages within the application are fully responsive.
 
 ### Prerequisites
 
